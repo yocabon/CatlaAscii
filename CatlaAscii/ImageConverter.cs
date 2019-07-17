@@ -74,7 +74,7 @@ namespace CatlaAscii
                         dy = 1;
                     }
 
-                    ascii[w, h] = weightedCharArray.MinBy(v => Math.Abs(grayscale - v.Weight)).Character.ToString();
+                    ascii[w, h] = weightedCharArray.MinBy(v => Math.Abs(grayscale - v.Weight)).First().Character.ToString();
                     colors[w, h] = Color.FromArgb((int)rgb.X, (int)rgb.Y, (int)rgb.Z);
                 }
             }

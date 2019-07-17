@@ -82,7 +82,7 @@ namespace CatlaAscii
                     ConsoleColor closestColor = ConsoleColors.MinBy(c =>
                      Math.Pow(asciiColor[w, h].R - c.Key.R, 2.0)
                     + Math.Pow(asciiColor[w, h].G - c.Key.G, 2.0)
-                    + Math.Pow(asciiColor[w, h].B - c.Key.B, 2.0)).Value;
+                    + Math.Pow(asciiColor[w, h].B - c.Key.B, 2.0)).First().Value;
                     if (opts.IsColored)
                         Console.ForegroundColor = closestColor;
                     Console.Write(asciiContent[w, h]);
